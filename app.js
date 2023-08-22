@@ -3,10 +3,13 @@ textInput.maxLength = 60;
 
 let charCount = document.querySelector("p");
 
+let remainingChar = 60;
+
 function updateValue() {
   let inputText = textInput.value;
   let count = inputText.length;
-  charCount.innerHTML = `${count}/ 60`;
+  let remainingChar = 60 - count;
+  charCount.innerHTML = `${remainingChar}/60`;
 }
 
 textInput.addEventListener("input", updateValue);
